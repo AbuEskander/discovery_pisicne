@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
-st = input("Enter string: ")
-
-st = st.swapcase()
-
-print(st)
+try:
+    st = input("Enter string: ")
+    print(st.swapcase())
+except EOFError:
+    print("EOF Error")
+except KeyboardInterrupt:
+    print("CTRL + C is pressed")

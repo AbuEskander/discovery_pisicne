@@ -5,6 +5,9 @@ try:
 except EOFError:
     print("EOF error boi")
     exit(0)
+except KeyboardInterrupt:
+    print("Interupt boi")
+    exit(131)
 whole_name = f"{first_name.strip()} {last_name.strip()}"
 
 print(whole_name.strip())

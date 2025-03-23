@@ -10,6 +10,7 @@ def shrink(st:str)-> str:
     return st[0:8]
 def enlarge(st:str)-> str:
     return st.ljust(8,"Z")
+
 for item in sys.argv[1:]:
     if len(item) == 8:
         print(item)

@@ -1,7 +1,16 @@
 #!/usr/bin/python3
-
-first_int = int(input("Enter first value: "))
-second_int = int(input("Enter second value: "))
+try:
+    first_int = int(input("Enter first value: "))
+    second_int = int(input("Enter second value: "))
+except ValueError:
+    print("Input is not integer")
+    exit(1)
+except KeyboardInterrupt:
+    print("CTRL + C pressed")
+    exit(1)
+except EOFError:
+    print("EOF error ")
+    exit(1)
 
 mult = first_int * second_int
 

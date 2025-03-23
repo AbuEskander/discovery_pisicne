@@ -1,7 +1,15 @@
 #!/usr/bin/python3
-
-number = int(input("Enter a number: "))
-
+try:
+    number = int(input("Enter a number: "))
+except ValueError:
+    print("Input is not an integer")
+    exit(1)
+except EOFError:
+    print("EOF error")
+    exit(1)
+except KeyboardInterrupt:
+    print("CTRL + C Pressed")
+    exit(1)
 if number < 0:
     print("This number is negative.")
 elif number > 0:

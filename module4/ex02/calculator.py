@@ -1,18 +1,15 @@
 #!/usr/bin/python3
-
-f_value = input("Give me the first number: ")
-s_value = input("Give me the second number: ")
-
-print("Thank you")
-
-if not f_value or not  s_value:
-    print("One of the inputed values are not numbers")
-    exit(1)
-f_value = int(f_value)
-s_value = int(s_value)
-
-print(f"{f_value} + {s_value} = {f_value + s_value}")
-print(f"{f_value} - {s_value} = {f_value - s_value}")
-print(f"{f_value} / {s_value} = {f_value / s_value}")
-print(f"{f_value} * {s_value} = {f_value * s_value}")
-
+try:
+    f_value = int(input("Give me the first number: "))
+    s_value = int(input("Give me the second number: "))
+    print("Thank you")
+    print(f"{f_value} + {s_value} = {f_value + s_value}")
+    print(f"{f_value} - {s_value} = {f_value - s_value}")
+    print(f"{f_value} / {s_value} = {f_value / s_value}")
+    print(f"{f_value} * {s_value} = {f_value * s_value}")
+except ValueError:
+    print("Input is not an integer")
+except KeyboardInterrupt:
+    print("CTRL + C is pressed")
+except EOFError:
+    print('EOF Error')
